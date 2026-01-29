@@ -1,0 +1,8 @@
+services:
+  supervisor:
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config:/app/config:ro
+    depends_on:
+      - indexer

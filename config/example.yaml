@@ -1,0 +1,17 @@
+# Indexer metrics endpoint URL
+indexerURL: http://indexer:3030
+
+# How often to query the block height
+queryInterval: 30s
+
+# How long block height can be stalled before restarting
+stallTimeout: 5m
+
+# How long to sleep after restart before resuming queries
+restartSleep: 900s
+
+# Metric name to query
+metricName: near_indexer_streaming_current_block_height
+
+# Docker container name to restart (matches container_name in docker-compose.yaml)
+containerName: near-lake-indexer
